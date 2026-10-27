@@ -8,16 +8,6 @@
  * describes its value.
  * Return: Always 0 (Success)
  */
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
-/**
- * main - Entry point of the program
- * Description: Prints the last digit of a random number and
- * describes its value.
- * Return: Always 0 (Success)
- */
 int main(void)
 {
 	int n;
