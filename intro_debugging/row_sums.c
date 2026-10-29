@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int row_sum(int row, int cols)
@@ -20,7 +19,7 @@ int total_sum(int rows, int cols)
 
     for (r = 1; r <= rows; r++)
     {
-        current += row_sum(r, cols);
+        current = row_sum(r, cols);
         total += current;
     }
 
