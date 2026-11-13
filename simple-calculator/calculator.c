@@ -8,6 +8,8 @@
 int main(void)
 {
 	int choix = 99;
+	int a;
+	int b;
 
 	while (choix != 0)
 	{
@@ -24,6 +26,39 @@ int main(void)
 		if (choix < 0 || choix > 4)
 		{
 			printf("Invalid choice\n");
+		}
+
+		if (choix == 1)
+		{
+			printf("A:");
+			scanf("%d", &a);
+
+			printf("B:");
+			scanf("%d", &b);
+
+			printf("Result: %d\n", a + b);
+		}
+
+		if (choix == 2)
+		{
+			printf("A:");
+			scanf("%d", &a);
+
+			printf("B:");
+			scanf("%d", &b);
+
+			printf("Result: %d\n", a - b);
+		}
+
+		if (choix == 3)
+		{
+			printf("A:");
+			scanf("%d", &a);
+
+			printf("B:");
+			scanf("%d", &b);
+
+			printf("Result: %d\n", a * b);
 		}
 	}
 
