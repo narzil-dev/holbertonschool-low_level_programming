@@ -14,7 +14,7 @@ int main(void)
 
 	while (choix != 0)
 	{
-		printf("Simple Calculator\n\n");
+		printf("\n\nSimple Calculator\n\n");
 		printf("1) Add\n");
 		printf("2) Subtract\n");
 		printf("3) Multiply\n");
@@ -23,6 +23,7 @@ int main(void)
 
 		printf("Votre choix:");
 		scanf("%d", &choix);
+        printf("\n");
 
 		if (choix < 0 || choix > 4)
 		{
