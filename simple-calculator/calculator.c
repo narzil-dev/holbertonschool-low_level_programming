@@ -1,9 +1,10 @@
+
 #include <stdio.h>
 
 /**
- * main - Displays an interactive calculator menu
+ * main - Affiche une calculatrice interactive avec quatre opérations
  *
- * Return: Always 0 (Success)
+ * Return: Toujours 0 (succès)
  */
 int main(void)
 {
@@ -59,6 +60,24 @@ int main(void)
 			scanf("%d", &b);
 
 			printf("Result: %d\n", a * b);
+		}
+
+		if (choix == 4)
+		{
+			printf("A:");
+			scanf("%d", &a);
+
+			printf("B:");
+			scanf("%d", &b);
+
+			if (b == 0)
+			{
+				printf("Error: division by zero\n");
+			}
+			else
+			{
+				printf("Result: %d\n", a / b);
+			}
 		}
 	}
 
