@@ -4,35 +4,42 @@
 #include <stdio.h>
 
 /**
- * print_strings - Affiche des chaînes avec un séparateur
- * @separator: Texte à afficher entre les chaînes
- * @n: Nombre de chaînes à afficher
+ * print_all - Affiche des arguments de différents types
+ * @format: Chaîne indiquant les types des arguments
  *
  * Return: Rien (void)
  */
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_all(const char * const format, ...)
 {
 	va_list args;
-	unsigned int i;
+	unsigned int i = 0;
 	char *chaine;
+	char *separateur = "";
 
-	va_start(args, n);
+	va_start(args, format);
 
-	for (i = 0; i < n; i++)
+	while (format != NULL && format[i] != '\0')
 	{
-		chaine = va_arg(args, char *);
-
-		if (chaine == NULL)
+		if (format[i] == 'c' || format[i] == 'i' ||
+		    format[i] == 'f' || format[i] == 's')
 		{
-			chaine = "(nil)";
+			printf("%s", separateur);
+			separateur = ", ";
 		}
 
-		printf("%s", chaine);
-
-		if (separator != NULL && i < n - 1)
+		if (format[i] == 's')
 		{
-			printf("%s", separator);
+			chaine = va_arg(args, char *);
+
+			(chaine == NULL) && printf("(nil)");
+			(chaine != NULL) && printf("%s", chaine);
 		}
+
+		(format[i] == 'c') && printf("%c", va_arg(args, int));
+		(format[i] == 'i') && printf("%d", va_arg(args, int));
+		(format[i] == 'f') && printf("%f", va_arg(args, double));
+
+		i++;
 	}
 
 	va_end(args);
