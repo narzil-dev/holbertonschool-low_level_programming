@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	unsigned int i = 0;
 	char *chaine;
-	char *separateur = "";
+	const char *separateur = "";
 
 	va_start(args, format);
 
@@ -31,13 +31,16 @@ void print_all(const char * const format, ...)
 		{
 			chaine = va_arg(args, char *);
 
-			(chaine == NULL) && printf("(nil)");
-			(chaine != NULL) && printf("%s", chaine);
+			(void)((chaine == NULL) && printf("(nil)"));
+			(void)((chaine != NULL) && printf("%s", chaine));
 		}
 
-		(format[i] == 'c') && printf("%c", va_arg(args, int));
-		(format[i] == 'i') && printf("%d", va_arg(args, int));
-		(format[i] == 'f') && printf("%f", va_arg(args, double));
+		(void)((format[i] == 'c') &&
+		       printf("%c", va_arg(args, int)));
+		(void)((format[i] == 'i') &&
+		       printf("%d", va_arg(args, int)));
+		(void)((format[i] == 'f') &&
+		       printf("%f", va_arg(args, double)));
 
 		i++;
 	}
