@@ -2,3 +2,12 @@ functions_nested_loops/_putchar.c
 benchmarking/baseline_loop
 .gitignore
 benchmarking/baseline_loop.c
+.DS_Store
+.gitignore
+ai_memory_visualizer_valgrind_tracer/README.md
+ai_memory_visualizer_valgrind_tracer/analysis/.gitkeep
+ai_memory_visualizer_valgrind_tracer/programs/aliasing_example.c
+ai_memory_visualizer_valgrind_tracer/programs/crash_example.c
+ai_memory_visualizer_valgrind_tracer/programs/heap_example.c
+ai_memory_visualizer_valgrind_tracer/programs/Makefile
+ai_memory_visualizer_valgrind_tracer/programs/stack_example.c
