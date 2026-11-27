@@ -1,4 +1,3 @@
-
 #include <stdlib.h>
 #include "lists.h"
 
@@ -19,4 +18,3 @@ void free_list(list_t *head)
 		courant = suivant;
 	}
 }
-  
